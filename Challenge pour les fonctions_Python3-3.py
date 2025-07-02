@@ -1,18 +1,12 @@
-# Demander un nombre entier à l'utilisateur
-while True:
-    try:
-        L = int(input("Entrez un nombre entier : "))
-        break
-    except ValueError:
-        print("Erreur : Veuillez entrer un nombre entier valide.")
+# Demander un nombre entier
+nombre = int(input("Entrez SVP un nombre entier et je vous dirai si c'est un carré parfait ou pas: "))
 
 # Vérifier si c'est un carré parfait
-if L < 0:
-    print(f"{L} n'est pas un carré parfait (les nombres négatifs ne sont pas des carrés réels).")
+if nombre < 0:
+    print("Ce n'est pas un carré parfait (les nombres négatifs ne sont pas des carrés parfait)")
 else:
-    racine = L**0.5  # Calculer la racine carrée
-    # Comparer avec la version arrondie
+    racine = nombre**0.5
     if racine == int(racine):
-        print(f"{L} est un carré parfait ! ({int(racine)}² = {L})")
+        print(f"Oui, {nombre} est un carré parfait ({int(racine)}²)")
     else:
-        print(f"{L} n'est pas un carré parfait.")
+        print(f"Non, {nombre} n'est pas un carré parfait")
